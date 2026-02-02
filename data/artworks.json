@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sunrise",
+    "title": "Impression, Sunrise",
+    "artist": "Claude Monet",
+    "year": "1872",
+    "tags": ["impressionism", "sea", "morning"],
+    "image": "/artworks/impression-sunrise.svg"
+  },
+  {
+    "id": "starry-night",
+    "title": "The Starry Night",
+    "artist": "Vincent van Gogh",
+    "year": "1889",
+    "tags": ["post-impressionism", "night", "sky"],
+    "image": "/artworks/starry-night.svg"
+  },
+  {
+    "id": "water-lilies",
+    "title": "Water Lilies",
+    "artist": "Claude Monet",
+    "year": "1916",
+    "tags": ["water", "garden", "light"],
+    "image": "/artworks/water-lilies.svg"
+  },
+  {
+    "id": "wave",
+    "title": "The Great Wave off Kanagawa",
+    "artist": "Hokusai",
+    "year": "1831",
+    "tags": ["ukiyo-e", "sea", "mountain"],
+    "image": "/artworks/great-wave.svg"
+  },
+  {
+    "id": "girl-pearl",
+    "title": "Girl with a Pearl Earring",
+    "artist": "Johannes Vermeer",
+    "year": "1665",
+    "tags": ["portrait", "baroque", "light"],
+    "image": "/artworks/girl-pearl-earring.svg"
+  },
+  {
+    "id": "guernica",
+    "title": "Guernica",
+    "artist": "Pablo Picasso",
+    "year": "1937",
+    "tags": ["cubism", "war", "monochrome"],
+    "image": "/artworks/guernica.svg"
+  },
+  {
+    "id": "kiss",
+    "title": "The Kiss",
+    "artist": "Gustav Klimt",
+    "year": "1908",
+    "tags": ["symbolism", "gold", "portrait"],
+    "image": "/artworks/the-kiss.svg"
+  },
+  {
+    "id": "scream",
+    "title": "The Scream",
+    "artist": "Edvard Munch",
+    "year": "1893",
+    "tags": ["expressionism", "anxiety", "sky"],
+    "image": "/artworks/the-scream.svg"
+  },
+  {
+    "id": "birth-venus",
+    "title": "The Birth of Venus",
+    "artist": "Sandro Botticelli",
+    "year": "1486",
+    "tags": ["renaissance", "mythology", "sea"],
+    "image": "/artworks/birth-of-venus.svg"
+  },
+  {
+    "id": "mona-lisa",
+    "title": "Mona Lisa",
+    "artist": "Leonardo da Vinci",
+    "year": "1503",
+    "tags": ["renaissance", "portrait", "smile"],
+    "image": "/artworks/mona-lisa.svg"
+  }
+]

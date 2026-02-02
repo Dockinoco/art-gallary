@@ -4,7 +4,7 @@ import SpotifyPlayer from "./components/SpotifyPlayer";
 
 export const metadata: Metadata = {
   title: "アートギャラリー 0",
-  description: "新しい価値を生み出していく"
+  description: "新しい価値を生み出していく０の挑戦。"
 };
 
 export default function RootLayout({

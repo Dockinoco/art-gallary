@@ -117,7 +117,7 @@ export default function HomePage() {
       <section className="header">
         <h1>アートギャラリー 0</h1>
         <p>
-          新しい価値を生み出していく
+          新しい価値を生み出していく０の挑戦。
         </p>
         <div className="controls">
           <input

@@ -20,6 +20,7 @@ export default function HomePage() {
   const [selectedArtist, setSelectedArtist] = useState("all");
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [isViewerUiVisible, setIsViewerUiVisible] = useState(true);
 
   const artists = useMemo(() => {
     return Array.from(new Set(artworks.map((art) => art.artist))).sort();
@@ -66,6 +67,10 @@ export default function HomePage() {
       if (event.key === "Escape") {
         setActiveIndex(null);
       }
+      if (event.key === " " || event.code === "Space") {
+        event.preventDefault();
+        setIsViewerUiVisible((prev) => !prev);
+      }
       if (event.key === "ArrowRight") {
         setActiveIndex((prev) =>
           prev === null ? null : (prev + 1) % filteredArtworks.length
@@ -85,6 +90,9 @@ export default function HomePage() {
 
   useEffect(() => {
     document.body.classList.toggle("modal-open", activeIndex !== null);
+    if (activeIndex === null) {
+      setIsViewerUiVisible(true);
+    }
     return () => {
       document.body.classList.remove("modal-open");
     };
@@ -149,21 +157,16 @@ export default function HomePage() {
               onClick={() => setActiveIndex(index)}
               role="button"
               tabIndex={0}
+              aria-label={`${art.title} / ${art.artist}`}
               onKeyDown={(event) => {
                 if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
                   setActiveIndex(index);
                 }
               }}
             >
-              <img src={art.image} alt={art.title} loading="lazy" />
-              <div className="card-header">
-                <div>
-                  <h3>{art.title}</h3>
-                  <p>
-                    {art.artist}
-                    {art.year ? ` / ${art.year}` : ""}
-                  </p>
-                </div>
+              <div className="card-media">
+                <img src={art.image} alt={art.title} loading="lazy" />
                 <button
                   type="button"
                   className={`favorite ${favorites.has(art.id) ? "active" : ""}`}
@@ -175,6 +178,10 @@ export default function HomePage() {
                 >
                   {favorites.has(art.id) ? "♥" : "♡"}
                 </button>
+                <div className="card-info">
+                  <p className="artist">{art.artist}</p>
+                  <p className="title">{art.title}</p>
+                </div>
               </div>
               <div className="taglist">
                 {art.tags.map((tag) => (
@@ -197,15 +204,16 @@ export default function HomePage() {
           aria-label="作品ビューア"
         >
           <div
-            className="modal-content"
+            className={`modal-content ${
+              isViewerUiVisible ? "" : "viewer-ui-hidden"
+            }`}
             onClick={(event) => event.stopPropagation()}
           >
             <img src={activeArtwork.image} alt={activeArtwork.title} />
-            <h2>{activeArtwork.title}</h2>
-            <p>
-              {activeArtwork.artist}
-              {activeArtwork.year ? ` / ${activeArtwork.year}` : ""}
-            </p>
+            <div className="viewer-info">
+              <p className="artist">{activeArtwork.artist}</p>
+              <p className="title">{activeArtwork.title}</p>
+            </div>
             <div className="modal-controls">
               <button
                 type="button"

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "sunrise",
+    "artist": "Claude Monet",
+    "image": "/artworks/impression-sunrise.svg"
+  },
+  {
+    "id": "starry-night",
+    "artist": "Vincent van Gogh",
+    "image": "/artworks/starry-night.svg"
+  },
+  {
+    "id": "water-lilies",
+    "artist": "Claude Monet",
+    "image": "/artworks/water-lilies.svg"
+  },
+  {
+    "id": "wave",
+    "artist": "Hokusai",
+    "image": "/artworks/great-wave.svg"
+  },
+  {
+    "id": "girl-pearl",
+    "artist": "Johannes Vermeer",
+    "image": "/artworks/girl-pearl-earring.svg"
+  },
+  {
+    "id": "guernica",
+    "artist": "Pablo Picasso",
+    "image": "/artworks/guernica.svg"
+  },
+  {
+    "id": "kiss",
+    "artist": "Gustav Klimt",
+    "image": "/artworks/the-kiss.svg"
+  },
+  {
+    "id": "scream",
+    "artist": "Edvard Munch",
+    "image": "/artworks/the-scream.svg"
+  },
+  {
+    "id": "birth-venus",
+    "artist": "Sandro Botticelli",
+    "image": "/artworks/birth-of-venus.svg"
+  },
+  {
+    "id": "mona-lisa",
+    "artist": "Leonardo da Vinci",
+    "image": "/artworks/mona-lisa.svg"
+  }
+]

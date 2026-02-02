@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9bb7d4" />
+      <stop offset="100%" stop-color="#4b79a1" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#g)" />
+  <path d="M120 460 C 260 260, 480 260, 620 460 C 680 560, 780 600, 820 640" fill="none" stroke="#ffffff" stroke-width="16" opacity="0.9" />
+  <rect x="120" y="650" width="660" height="140" rx="40" fill="#ffffff" opacity="0.9" />
+  <text x="450" y="730" font-size="38" text-anchor="middle" font-family="'Helvetica Neue', Arial" fill="#1f3f5b">The Great Wave off Kanagawa</text>
+  <text x="450" y="790" font-size="26" text-anchor="middle" font-family="'Helvetica Neue', Arial" fill="#38526b">Hokusai</text>
+</svg>

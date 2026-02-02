@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c7e9f1" />
+      <stop offset="100%" stop-color="#f1d9c7" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#g)" />
+  <ellipse cx="450" cy="380" rx="200" ry="120" fill="#ffffff" opacity="0.4" />
+  <rect x="120" y="650" width="660" height="140" rx="40" fill="#ffffff" opacity="0.9" />
+  <text x="450" y="730" font-size="38" text-anchor="middle" font-family="'Helvetica Neue', Arial" fill="#365b66">The Birth of Venus</text>
+  <text x="450" y="790" font-size="26" text-anchor="middle" font-family="'Helvetica Neue', Arial" fill="#496b73">Sandro Botticelli</text>
+</svg>

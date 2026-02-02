@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d2c7b6" />
+      <stop offset="100%" stop-color="#a89f8f" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#g)" />
+  <rect x="240" y="260" width="420" height="280" rx="40" fill="#ffffff" opacity="0.35" />
+  <rect x="120" y="650" width="660" height="140" rx="40" fill="#ffffff" opacity="0.9" />
+  <text x="450" y="730" font-size="40" text-anchor="middle" font-family="'Helvetica Neue', Arial" fill="#40392f">Mona Lisa</text>
+  <text x="450" y="790" font-size="26" text-anchor="middle" font-family="'Helvetica Neue', Arial" fill="#5b5348">Leonardo da Vinci</text>
+</svg>

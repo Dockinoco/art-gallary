@@ -115,10 +115,9 @@ export default function HomePage() {
   return (
     <main>
       <section className="header">
-        <h1>Art Gallary</h1>
+        <h1>アートギャラリー 0</h1>
         <p>
-          余白を大きくとったMasonryレイアウトで、作品を静かに眺められる
-          コレクション。検索と作者フィルタで気になる作品をすばやく探し、♡でお気に入り登録できます。
+          新しい価値を生み出していく０の挑戦。
         </p>
         <div className="controls">
           <input

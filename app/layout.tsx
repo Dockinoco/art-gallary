@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import SpotifyPlayer from "./components/SpotifyPlayer";
 
 export const metadata: Metadata = {
-  title: "Art Gallary",
-  description: "ゆったり眺める美術コレクション"
+  title: "アートギャラリー 0",
+  description: "新しい価値を生み出していく０の挑戦。"
 };
 
 export default function RootLayout({

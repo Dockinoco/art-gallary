@@ -5,10 +5,7 @@ import artworksData from "../data/artworks.json";
 
 interface Artwork {
   id: string;
-  title: string;
   artist: string;
-  year?: string;
-  tags: string[];
   image: string;
 }
 
@@ -31,10 +28,7 @@ export default function HomePage() {
     return artworks.filter((art) => {
       const matchesArtist = selectedArtist === "all" || art.artist === selectedArtist;
       const matchesQuery =
-        q.length === 0 ||
-        art.title.toLowerCase().includes(q) ||
-        art.artist.toLowerCase().includes(q) ||
-        art.tags.some((tag) => tag.toLowerCase().includes(q));
+        q.length === 0 || art.artist.toLowerCase().includes(q);
       return matchesArtist && matchesQuery;
     });
   }, [artworks, query, selectedArtist]);
@@ -122,7 +116,7 @@ export default function HomePage() {
         <div className="controls">
           <input
             type="search"
-            placeholder="タイトル・作者・タグで検索"
+            placeholder="アーティストで検索"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             aria-label="検索"
@@ -156,7 +150,7 @@ export default function HomePage() {
               onClick={() => setActiveIndex(index)}
               role="button"
               tabIndex={0}
-              aria-label={`${art.title} / ${art.artist}`}
+              aria-label={art.artist}
               onKeyDown={(event) => {
                 if (event.key === "Enter" || event.key === " ") {
                   event.preventDefault();
@@ -165,7 +159,7 @@ export default function HomePage() {
               }}
             >
               <div className="card-media">
-                <img src={art.image} alt={art.title} loading="lazy" />
+                <img src={art.image} alt={art.artist} loading="lazy" />
                 <button
                   type="button"
                   className={`favorite ${favorites.has(art.id) ? "active" : ""}`}
@@ -179,15 +173,7 @@ export default function HomePage() {
                 </button>
                 <div className="card-info">
                   <p className="artist">{art.artist}</p>
-                  <p className="title">{art.title}</p>
                 </div>
-              </div>
-              <div className="taglist">
-                {art.tags.map((tag) => (
-                  <span className="tag" key={tag}>
-                    {tag}
-                  </span>
-                ))}
               </div>
             </article>
           ))}
@@ -208,10 +194,9 @@ export default function HomePage() {
             }`}
             onClick={(event) => event.stopPropagation()}
           >
-            <img src={activeArtwork.image} alt={activeArtwork.title} />
+            <img src={activeArtwork.image} alt={activeArtwork.artist} />
             <div className="viewer-info">
               <p className="artist">{activeArtwork.artist}</p>
-              <p className="title">{activeArtwork.title}</p>
             </div>
             <div className="modal-controls">
               <button
